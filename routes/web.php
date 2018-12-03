@@ -13,7 +13,11 @@
 
 // angelbert.maghanoy@gmail.com
 
-Route::get('/', function () {
+Route::get('/act_laravel', function () {
     return view('welcome');
 });
 
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
